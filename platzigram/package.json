@@ -1,0 +1,17 @@
+{
+  "name": "platzigram",
+  "version": "0.1.0",
+  "description": "Comparte tus fotos estudiando en Platzi con el rsto de la comunidad\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[Desto d\u001b[C\u001b[C\u001b[D \u001b[D\u001b[De la comu",
+  "main": "server.js",
+  "author": "Yamile Tabares",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.2",
+    "materialize-css": "^0.100.2"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0"
+  }
+}
