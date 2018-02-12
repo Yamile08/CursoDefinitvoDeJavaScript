@@ -2,6 +2,7 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
 var rename = require('gulp-rename'); //Renombrar el archivo final
 
+
 gulp.task('styles', function () {
   gulp
     .src('index.scss')
