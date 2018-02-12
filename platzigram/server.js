@@ -4,6 +4,8 @@ var app = express();
 
 app.set('view engine', 'pug');//Para desirle a express utilizando node que nuestra aplicacion va utilizar un motor de vistas
 
+app.use(express.static('public'));
+
 app.get('/', function (req, res) {
   res.render('index');
 })
