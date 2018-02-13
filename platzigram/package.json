@@ -1,7 +1,7 @@
 {
   "name": "platzigram",
   "version": "0.1.0",
-  "description": "Comparte tus fotos estudiando en Platzi con el rsto de la comunidad\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[Desto d\u001b[C\u001b[C\u001b[D \u001b[D\u001b[De la comu",
+  "description": "Comparte tus fotos estudiando en Platzi con el rsto de la comunidad",
   "main": "server.js",
   "author": "Yamile Tabares",
   "license": "MIT",
@@ -19,6 +19,11 @@
     "gulp": "^3.9.1",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.1.0",
-    "vinyl-source-stream": "^2.0.0"
+    "vinyl-source-stream": "^2.0.0",
+    "watchify": "^3.10.0"
+  },
+  "scripts": {
+    "build": "gulp",
+    "start": "gulp watch | node server.js"
   }
 }
