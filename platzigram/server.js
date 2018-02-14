@@ -7,15 +7,15 @@ app.set('view engine', 'pug');//Para desirle a express utilizando node que nuest
 app.use(express.static('public'));
 
 app.get('/', function (req, res) {
-  res.render('index');
+  res.render('index', { title: 'Platzigram' });
 })
 
 app.get('/signup', function (req, res) {
-  res.render('index');
+  res.render('index', { title: 'Platzigram - signup' });
 })
 
 app.get('/signin', function (req, res) {
-  res.render('index');
+  res.render('index', { title: 'Platzigram - signin' });
 })
 
 app.listen(3000, function (err) {
