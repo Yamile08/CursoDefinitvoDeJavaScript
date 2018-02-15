@@ -9,6 +9,7 @@
     "empty-element": "^1.0.0",
     "express": "^4.16.2",
     "materialize-css": "^0.100.2",
+    "moment": "^2.20.1",
     "page": "^1.8.3",
     "pug": "^2.0.0-rc.4",
     "title": "^3.2.0",
