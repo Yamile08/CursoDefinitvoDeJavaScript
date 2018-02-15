@@ -10,17 +10,17 @@ page('/', function (ctx, next) {
   var pictures = [
     {
       user: {
-        username: 'Yamile',
-        avatar: 'https://scontent.fbog2-1.fna.fbcdn.net/v/t1.0-9/13939415_10154480949099686_6188701234441477833_n.jpg?oh=c071f62fd52318321c538fcedd5799f1&oe=5B15D88F'
+        username: 'slifszyc',
+        avatar: 'https://scontent-atl3-1.xx.fbcdn.net/hphotos-xpa1/v/t1.0-9/11031148_10153448564292612_2579019413701631604_n.jpg?oh=d83cdd0687c87c91b247a42375fc5a57&oe=57B12767'
       },
       url: 'office.jpg',
       likes: 10,
-      liked: true
+      liked: false
     },
     {
       user: {
-        username: 'Miguel',
-        avatar: 'https://scontent.fbog2-1.fna.fbcdn.net/v/t1.0-9/15747749_10154906357844686_3080866391470467298_n.jpg?oh=93423a350983380afa9f686e3403c029&oe=5B0CFE49'
+        username: 'slifszyc',
+        avatar: 'https://scontent-atl3-1.xx.fbcdn.net/hphotos-xpa1/v/t1.0-9/11031148_10153448564292612_2579019413701631604_n.jpg?oh=d83cdd0687c87c91b247a42375fc5a57&oe=57B12767'
       },
       url: 'office.jpg',
       likes: 2,
