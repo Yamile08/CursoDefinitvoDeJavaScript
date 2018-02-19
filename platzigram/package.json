@@ -6,12 +6,14 @@
   "author": "Yamile Tabares",
   "license": "MIT",
   "dependencies": {
+    "babel-core": "^6.26.0",
     "empty-element": "^1.0.0",
     "express": "^4.16.2",
     "intl-relativeformat": "^2.1.0",
     "materialize-css": "^0.100.2",
     "page": "^1.8.3",
     "pug": "^2.0.0-rc.4",
+    "superagent": "^3.8.2",
     "title": "^3.2.0",
     "yo-yo": "^1.4.1"
   },
