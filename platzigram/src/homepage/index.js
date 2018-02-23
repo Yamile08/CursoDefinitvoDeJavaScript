@@ -5,12 +5,67 @@ var title = require('title');
 var request = require('superagent');
 var header = require('../header');
 var axios = require('axios');
+var webcam = require('webcamjs');
+var picture = require('../picture-card');
 
 page('/', header, loading, asyncLoad, function (ctx, next) {
   title('Platzigram');
   var main = document.getElementById('main-container');
 
   empty(main).appendChild(template(ctx.pictures));
+
+  const picturePreview = $('#picture-preview');
+  const camaraInput = $('#camara-input');
+  const cancelPicture = $('#cancelPicture');
+  const shootButton = $('#shoot');
+  const uploadButton = $('#uploadButton');
+
+  function reset() {
+    picturePreview.addClass('hide');
+    cancelPicture.addClass('hide');
+    uploadButton.addClass('hide');
+    shootButton.removeClass('hide');
+    camaraInput.removeClass('hide');
+  }
+
+  cancelPicture.click(reset);
+
+  $('.modal-trigger').leanModal({
+    ready:function(){
+      Webcam.attach('#camara-input');
+      shootButton.click((ev) => {
+        Webcam.snap((data_uri) => {
+          picturePreview.html (`<img src="${data_uri}"/>`);
+          picturePreview.removeClass('hide');
+          cancelPicture.removeClass('hide');
+          uploadButton.removeClass('hide');
+          shootButton.addClass('hide');
+          camaraInput.addClass('hide');
+          uploadButton.off('click');
+          uploadButton.click(() => {
+              const pic = {
+                url: data_uri,
+                likes: 0,
+                liked: false,
+                createAt: +new Date(),
+                user: {
+                    username: 'Yamile',
+                    avatar: 'https://scontent.fbog2-1.fna.fbcdn.net/v/t1.0-9/13939415_10154480949099686_6188701234441477833_n.jpg?oh=c071f62fd52318321c538fcedd5799f1&oe=5B15D88F'
+                  }
+                }
+
+                $('#picture-cards').prepend(picture(pic));
+                reset();
+                $('#modalCamara').modal('close');
+              })
+            });
+          })
+        },
+    complete: function(){
+      Webcam.reset();
+      reset();
+    }
+  })
 })
 
 function loading(ctx, next) {
